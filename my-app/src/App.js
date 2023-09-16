@@ -106,11 +106,10 @@ export default function App() {
   }
 
   return (
-  
     <div className="app">
+      <h2 className="title">Sodoku Solver</h2>
       <div className="grid">
-        <h2 className="title">Sodoku Solver</h2>
-        <table>
+        <table className="table">
           <tbody>
             {arr.map((el, ind) => (
               <React.Fragment key={ind}>
@@ -130,21 +129,30 @@ export default function App() {
         </table>
       </div>
       <div className="buttons">
-        <button
+        <button className="solve"
           onClick={() => {
+            /*
             const slv = async () => {
               const an = solve(grid);
               return an;
             };
             
-            slv().then(an => {
+            setTimeout(async () => {
+              const an = await slv();
               if (an === false) {
                 alert("Invalid puzzle");
               } else {
                 setGrid(an);
               }
-            });
-            
+            }, 0);
+            */
+           const an = solve(grid);
+           if(an === false){
+            alert("Invalid Puzzle");
+           }            
+           else{
+            setGrid(an);
+           }
           }}
 
         >
@@ -153,16 +161,16 @@ export default function App() {
 
         <button onClick={() => {
           let genGrid = sendArr();
-          setGrid(sendArr(genGrid));
-          }}>
+          setGrid(genGrid);
+          }}
+          className="Gen-P">
           Generate Puzzle
         </button>
 
-        <button onClick={() => setGrid(arr)}>
+        <button onClick={() => setGrid(arr)} className="reset">
           Reset
         </button>
       </div>
     </div>
-
   );
 }

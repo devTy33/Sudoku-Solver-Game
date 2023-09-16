@@ -1,3 +1,4 @@
+
 export function rowCheck(arr, r) {
     let checker = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     for (let c = 0; c < 9; c++) {
