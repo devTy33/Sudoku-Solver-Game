@@ -113,8 +113,8 @@ export default function App() {
           <tbody>
             {arr.map((el, ind) => (
               <React.Fragment key={ind}>
-                {ind % 9 === 0 && <tr key={ind}/>}
-                <td>
+                {ind % 9 === 0 && <tr key={ind} className={ ((ind/9) % 3) === 0 && ind > 8  ? "row" : ""}/>}
+                <td className={ (ind - 2) % 9 == 0 || (ind - 5) % 9 == 0 ? "col" : ""}>
                   <input
                     key={ind}
                     type="text"

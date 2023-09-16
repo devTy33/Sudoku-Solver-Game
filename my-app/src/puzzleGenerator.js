@@ -38,6 +38,13 @@ function calc_dispersion(sudokuArray){
                         inc++;
                     }
                 }
+                /*
+                else{
+                    if(sudokuArray[(i*9+j) - 1] === -1 && sudokuArray[(i*9+j) + 9] === -1 && sudokuArray[(i*9+j) - 9] === -1 && sudokuArray[(i*9+j) + 1] === -1){
+                        inc++;
+                    }
+                }
+                */
 
             }
         }
@@ -67,7 +74,7 @@ export function sendArr(){
     var dispersion = 0;
     var arr;
     var valid = false;
-    while(valid === false || dispersion < 7){
+    while(valid === false || dispersion < 8){
         arr = generateArray();
         valid = isValid(arr);
         dispersion = calc_dispersion(arr);
