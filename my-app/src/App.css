@@ -1,0 +1,15 @@
+.cells {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.title {
+  color: rgb(226, 181, 141);
+}
+
+.app {
+  background-color: grey;
+}
