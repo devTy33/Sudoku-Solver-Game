@@ -90,8 +90,9 @@ const arr = [
 export default function App() {
   const [grid, setGrid] = useState(arr);
 
+  //Handle user input into the grid
   function handleInp(e, ind) {
-    let val = parseInt(e.target.value)
+    let val = parseInt(e.target.value);
     const newData = grid.map((el, i) => {
       if (i === ind) {
         if(isNaN(val)) return -1;
@@ -107,14 +108,14 @@ export default function App() {
 
   return (
     <div className="app">
-      <h2 className="title">Sodoku Solver</h2>
+      <h2 className="title">Sudoku Solver</h2>
       <div className="grid">
         <table className="table">
           <tbody>
             {arr.map((el, ind) => (
               <React.Fragment key={ind}>
                 {ind % 9 === 0 && <tr key={ind} className={ ((ind/9) % 3) === 0 && ind > 8  ? "row" : ""}/>}
-                <td className={ (ind - 2) % 9 == 0 || (ind - 5) % 9 == 0 ? "col" : ""}>
+                <td className={ (ind - 2) % 9 === 0 || (ind - 5) % 9 === 0 ? "col" : ""}>
                   <input
                     key={ind}
                     type="text"

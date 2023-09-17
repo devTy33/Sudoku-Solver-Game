@@ -13,6 +13,7 @@ function isValid(sArr){
     return true;
 }
 
+//Checks how dispersed a generated puzzle is since the algorithm is faster with a spread out puzzle
 function calc_dispersion(sudokuArray){
     let inc = 0;
     for(let i = 0; i < 9; i++){
@@ -81,7 +82,5 @@ export function sendArr(){
 
     
     }
-   // dispersion = calc_dispersion(arr);
-    alert(dispersion);
     return arr;
 }

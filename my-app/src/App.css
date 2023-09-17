@@ -73,6 +73,14 @@ body {
   width: 80px;
   background-color: #efa953;;
 }
+.solve:hover{
+  background-color: #af7b3c;
+  cursor: pointer;
+}
+.solve:active {
+  background-color: rgb(69, 215, 69);
+}
+
 
 .Gen-P {
   height: 40px;
@@ -83,10 +91,30 @@ body {
 
 }
 
+.Gen-P:hover {
+  background-color: #af7b3c;
+  cursor: pointer;
+}
+
+.Gen-P:active{
+  background-color: rgb(65, 115, 181);
+}
+
+
+
 .reset {
   margin-left: 10px;
   border-radius: 100px;
   height: 30px;
   width: 80px;
   background-color: #efa953;;
+}
+
+.reset:hover{
+  background-color: #af7b3c;
+  cursor: pointer;
+}
+
+.reset:active{
+  background-color: rgb(229, 69, 69);
 }
